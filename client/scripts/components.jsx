@@ -65,6 +65,13 @@ app.components = app.components || {};
           <h1>Dashboard</h1>
           <p>You made it!</p>
           <p>{token}</p>
+          <CalendarControlComponent/>
+          <ControlComponent/>
+          <ul>
+            <li><EventsComponent/></li>
+            <li><EventsComponent/></li>
+            <li><EventsComponent/></li>
+          </ul>
         </div>
       );
     }
@@ -119,5 +126,79 @@ app.components = app.components || {};
       );
     }
   });
+
+  var EventsComponent = app.components.EventsComponent = React.createClass({
+
+    render: function() {
+      return (
+        <div>
+          <ul>
+            <li><EventComponent/></li>
+            <li><EventComponent/></li>
+            <li><EventComponent/></li>
+          </ul>
+        </div>
+      );
+    }
+
+  });
+
+  var EventComponent = app.components.EventComponent = React.createClass({
+
+    render: function() {
+      return (
+        <div>
+          <ul>
+            <li><StaffComponent/></li>
+            <li><StaffComponent/></li>
+            <li><StaffComponent/></li>
+            <li><StaffComponent/></li>
+          </ul>
+        </div>
+      );
+    }
+
+  });
+
+  var StaffComponent = app.components.StaffComponent = React.createClass({
+    
+    render: function() {
+      return (
+        <div>
+          <p>Josh</p><img src='http://www.placehold.it/15x15'/>
+        </div>
+      );
+    }
+  });
+
+  var CalendarControlComponent = app.components.CalendarControlComponent = React.createClass({
+    render: function() {
+      return (
+        <div>
+          <h1>Employee List</h1>
+          <p>Current Date</p>
+        </div>
+      );
+    }
+  });
+
+  var ControlComponent = app.components.ControlComponent = React.createClass({
+    render: function() {
+      return (
+        <div>
+          <img src='htpp://placehold.it/50x50'/>
+          <ul>
+            <li><p>Add Event</p></li>
+            <li><img src="http://placehold.it/25x25"/><p>List All Events</p></li>
+            <li><img src="http://placehold.it/25x25"/><p>Event Health</p></li>
+            <li><img src="http://placehold.it/25x25"/><p>List Employees</p></li>
+            <li><img src="http://placehold.it/25x25"/><p>Approval Flow</p></li>
+          </ul>
+        </div>
+      );
+    }
+
+  });
+  
 
 })();

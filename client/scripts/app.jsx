@@ -2,10 +2,10 @@
 var app = app || {};
 
 app.FIXTURES = [
-   {title: 'Investment 1', src: 'http://placehold.it/150x150'},
-   {title: 'Investment 2', src: 'http://placehold.it/150x150'},
-   {title: 'Investment 3', src: 'http://placehold.it/150x150'},
-   {title: 'Investment 4', src: 'http://placehold.it/150x150'}
+   {name: 'Kyle', photo: 'http://placehold.it/150x150'},
+   {title: 'Josh', photo: 'http://placehold.it/150x150'},
+   {title: 'Ryan', photo: 'http://placehold.it/150x150'},
+   {title: 'Jacob', photo: 'http://placehold.it/150x150'}
 ];
 
 var Router = ReactRouter; // or var Router = ReactRouter; in browsers
