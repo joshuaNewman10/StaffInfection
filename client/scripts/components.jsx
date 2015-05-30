@@ -165,7 +165,7 @@ app.components = app.components || {};
     render: function() {
       return (
         <div>
-          <p>Josh</p><img src='http://www.placehold.it/15x15'/>
+          <p>Josh</p><img src="http://www.placehold.it/15x15"/>
         </div>
       );
     }
@@ -186,7 +186,7 @@ app.components = app.components || {};
     render: function() {
       return (
         <div>
-          <img src='htpp://placehold.it/50x50'/>
+          <img src="htpp://placehold.it/50x50"/>
           <ul>
             <li><p>Add Event</p></li>
             <li><img src="http://placehold.it/25x25"/><p>List All Events</p></li>
