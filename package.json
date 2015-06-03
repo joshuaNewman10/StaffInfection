@@ -1,0 +1,26 @@
+{
+  "name": "StaffInfection",
+  "version": "1.0.0",
+  "description": "Catering Scheduler App",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browserify": "^10.2.3",
+    "gulp": "^3.9.0",
+    "react": "^0.13.3",
+    "reactify": "^1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshuaNewman10/StaffInfection.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshuaNewman10/StaffInfection/issues"
+  },
+  "homepage": "https://github.com/joshuaNewman10/StaffInfection"
+}
