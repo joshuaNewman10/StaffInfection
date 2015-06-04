@@ -19783,14 +19783,36 @@ module.exports = require('./lib/React');
 
 },{"./lib/React":29}],157:[function(require,module,exports){
 /** @jsx React.DOM */
+
+var React = require('react');
+var Header = require('./header/app-header.js');
+
+var Template = React.createClass({displayName: "Template",
+  render: function() {
+    return (
+      React.createElement("div", {className: "container"}, 
+        React.createElement(Header, null), 
+        this.props.children
+      )
+    );
+  }
+});
+
+module.exports = Template;
+
+},{"./header/app-header.js":161,"react":156}],158:[function(require,module,exports){
+/** @jsx React.DOM */
 var React = require('react');
 
+var Template = require('./app-template.js');
+var CateringEvents = require('./cateringevents/app-cateringevents.js');
 
 var App = React.createClass({displayName: "App",
   render: function() {
     return (
-        React.createElement("div", null, 
-          React.createElement("h1", null, "App Component")
+        React.createElement(Template, null, 
+          React.createElement("h1", null, "App Component"), 
+          React.createElement(CateringEvents, null)
         )
     );
   }
@@ -19801,7 +19823,69 @@ module.exports = App;
 
 
 
-},{"react":156}],158:[function(require,module,exports){
+},{"./app-template.js":157,"./cateringevents/app-cateringevents.js":160,"react":156}],159:[function(require,module,exports){
+/** @jsx React.DOM */
+
+var React = require('react');
+
+var CateringEvent = React.createClass({displayName: "CateringEvent",
+  render: function() {
+    return (
+      React.createElement("div", null, 
+        React.createElement("ul", null, 
+          React.createElement("li", null, "Person 1"), 
+          React.createElement("li", null, "Person 2"), 
+          React.createElement("li", null, "Person 3"), 
+          React.createElement("li", null, "Person 4"), 
+          React.createElement("li", null, "Person 5")
+        )
+      )
+    );
+  }
+});
+
+module.exports = CateringEvent;
+
+},{"react":156}],160:[function(require,module,exports){
+/** @jsx React.DOM */
+
+var React = require('react');
+var CateringEvent = require('./app-cateringevent.js');
+
+var CateringEvents = React.createClass({displayName: "CateringEvents",
+  render: function() {
+    return (
+      React.createElement("div", null, 
+        React.createElement("ul", null, 
+          React.createElement("li", null, React.createElement(CateringEvent, null)), 
+          React.createElement("li", null, React.createElement(CateringEvent, null)), 
+          React.createElement("li", null, React.createElement(CateringEvent, null))
+        )
+      )
+    );
+  }
+});
+
+module.exports = CateringEvents;
+
+},{"./app-cateringevent.js":159,"react":156}],161:[function(require,module,exports){
+/** @jsx React.DOM */
+
+var React = require('react');
+
+var Header = React.createClass({displayName: "Header",
+  render: function() {
+    return (
+        React.createElement("div", null, 
+          React.createElement("h4", null, "Im the Header")
+        )
+    );
+  }
+});
+
+module.exports = Header;
+
+},{"react":156}],162:[function(require,module,exports){
 /** @jsx React.DOM */
 
 var React = require('react');
@@ -19810,4 +19894,4 @@ var App = require('./components/app');
 React.render(React.createElement(App), document.getElementById('main'));
 
 
-},{"./components/app":157,"react":156}]},{},[158])
+},{"./components/app":158,"react":156}]},{},[162])
